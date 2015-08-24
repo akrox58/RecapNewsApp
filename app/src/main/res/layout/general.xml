@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/edu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Education Stories"/>
+    <Button
+        android:id="@+id/tech"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Technological Stories"/>
+    <Button
+        android:id="@+id/sports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sports Stories"/>
+    <Button
+        android:id="@+id/science"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Science Stories"/>
+    <Button
+        android:id="@+id/business"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Business Stories"/>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rufflez.parseloginexample" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".SampleApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".DispatchActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SignUpOrLoginActivity" />
+        <activity android:name=".rssurls.Splash1" />
+        <activity android:name=".rssurls.Splash2" />
+        <activity android:name=".rssurls.Splash3" />
+        <activity android:name=".rssurls.Splash4" />
+        <activity android:name=".rssurls.Splash5" />
+        <activity android:name=".rssurls.Splash6" />
+        <activity android:name=".rssurls.Splash7" />
+        <activity android:name=".rssurls.Splash8" />
+        <activity android:name=".rssurls.Splash9" />
+        <activity android:name=".rssurls.Splash10" />
+        <activity android:name=".rssurls.Splash11" />
+        <activity android:name=".rssurls.Splash12" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/title_activity_splash" >
+        </activity>
+        <activity
+            android:name=".ListAct"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail" >
+        </activity>
+        <activity
+            android:name=".MainHome"
+            android:label="@string/title_activity_main_home" >
+        </activity>
+        <activity
+            android:name=".General"
+            android:label="@string/title_activity_general" >
+        </activity>
+        <activity
+            android:name=".Location"
+            android:label="@string/title_activity_location" >
+        </activity>
+    </application>
+
+</manifest>
