@@ -33,11 +33,11 @@ String fileName;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
- 
+
 setContentView(R.layout.splash);
- 
-fileName = "TDRSSFeed.td";
- 
+
+fileName = "TDRSSFeed1.txt";
+
 File feedFile = getBaseContext().getFileStreamPath(fileName);
  
 ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -65,7 +65,7 @@ finish();
 AlertDialog alert = builder.create();
 alert.show();
 } else {
- 
+
 // No connectivty and file exists: Read feed from the File
 Toast toast = Toast.makeText(this,
 "No connectivity! Reading last update...",

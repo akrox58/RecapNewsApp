@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.rufflez.parseloginexample.SplashActivity">
     <item android:id="@+id/action_settings"
-        android:title="Logout"
+        android:title="EXIT"
         android:orderInCategory="100"
         android:showAsAction="always" />
 </menu>

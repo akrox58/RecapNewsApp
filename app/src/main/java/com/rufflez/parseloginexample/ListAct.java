@@ -142,7 +142,7 @@ public class ListAct extends Activity  {
             TextView tvDate = (TextView) listItem.findViewById(R.id.date);
 
 // Set the views in the layout
-            imageLoader.DisplayImage(feed.getItem(pos).getImage(), iv);
+            imageLoader.DisplayImage("/home/kumar/AndroidStudioProjects/RecapNewsApp/app/src/main/res/drawable/puzzle.png"/*feed.getItem(pos).getImage()*/, iv);
             tvTitle.setText(feed.getItem(pos).getTitle());
             tvDate.setText(feed.getItem(pos).getDate());
 

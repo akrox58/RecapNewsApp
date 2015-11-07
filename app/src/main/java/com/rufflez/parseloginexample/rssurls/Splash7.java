@@ -36,7 +36,7 @@ super.onCreate(savedInstanceState);
  
 setContentView(R.layout.splash);
  
-fileName = "TDRSSFeed.td";
+fileName = "TDRSSFeed7.td";
  
 File feedFile = getBaseContext().getFileStreamPath(fileName);
  

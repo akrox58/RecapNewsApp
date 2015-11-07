@@ -56,6 +56,22 @@ public class SignUpActivity extends Activity {
                     validationErrorMessage.append(getResources().getString(
                             R.string.error_mismatched_passwords));
                 }
+                if (isSame(passwordView, usernameView)) {
+                    if (validationError) {
+                        validationErrorMessage.append(getResources().getString(R.string.error_join));
+                    }
+                    validationError = true;
+                    validationErrorMessage.append(getResources().getString(
+                            R.string.error_same_usrpw));
+                }
+                if (!isSize(passwordView)) {
+                    if (validationError) {
+                        validationErrorMessage.append(getResources().getString(R.string.error_join));
+                    }
+                    validationError = true;
+                    validationErrorMessage.append(getResources().getString(
+                            R.string.smallsize));
+                }
                 validationErrorMessage.append(getResources().getString(R.string.error_end));
 
                 // If there is a validation error, display the error
@@ -106,6 +122,22 @@ public class SignUpActivity extends Activity {
 
     private boolean isMatching(EditText etText1, EditText etText2) {
         if (etText1.getText().toString().equals(etText2.getText().toString())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean isSame(EditText etText1, EditText etText2) {
+        if (etText1.getText().toString().equals(etText2.getText().toString())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean isSize(EditText etText1) {
+        if (etText1.length()>4) {
             return true;
         } else {
             return false;

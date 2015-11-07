@@ -36,7 +36,7 @@ super.onCreate(savedInstanceState);
  
 setContentView(R.layout.splash);
  
-fileName = "TDRSSFeed.td";
+fileName = "TDRSSFeed11.td";
  
 File feedFile = getBaseContext().getFileStreamPath(fileName);
  
@@ -107,7 +107,8 @@ DOMParser myParser = new DOMParser();
 feed = myParser.parseXml(RSSFEEDURL);
 if (feed != null && feed.getItemCount() > 0)
 WriteFeed(feed);
-return null;
+
+    return null;
  
 }
  

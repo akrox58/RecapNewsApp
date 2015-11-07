@@ -24,31 +24,43 @@ public class General extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.general);
+
+        //education 4
         ((Button) findViewById(R.id.edu)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(General.this, Splash4.class));
             }
         });
+
+        //technical 5
         ((Button) findViewById(R.id.tech)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(General.this, Splash5.class));
             }
         });
+
+        //business 6
         ((Button) findViewById(R.id.business)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(General.this, Splash6.class));
             }
         });
+
+        //science 7
         ((Button) findViewById(R.id.science)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(General.this, Splash7.class));
             }
         });
+
+        //sports 8
         ((Button) findViewById(R.id.sports)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity

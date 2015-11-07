@@ -10,7 +10,7 @@ android:layout_height="fill_parent" >
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true"
     android:contentDescription="@string/app_name"
-    android:src="@drawable/loading" />
+    android:src="@drawable/blue" />
 
 <LinearLayout
     android:id="@+id/linearLayout1"

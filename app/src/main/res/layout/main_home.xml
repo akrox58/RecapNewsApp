@@ -3,7 +3,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/b1">
 
     <Button
         android:id="@+id/top"
@@ -31,9 +32,13 @@
         android:layout_height="wrap_content"
         android:text="World Stories"/>
 
-
-
-
+    <Button
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download for offline reading!"
+        android:layout_gravity="bottom"
+        />
 
 
 </LinearLayout>

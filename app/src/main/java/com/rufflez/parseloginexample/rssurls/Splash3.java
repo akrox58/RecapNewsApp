@@ -36,7 +36,7 @@ super.onCreate(savedInstanceState);
  
 setContentView(R.layout.splash);
  
-fileName = "TDRSSFeed.td";
+fileName = "TDRSSFeed3.td";
  
 File feedFile = getBaseContext().getFileStreamPath(fileName);
  
@@ -88,7 +88,7 @@ private void startLisActivity(RSSFeed feed) {
 Bundle bundle = new Bundle();
 bundle.putSerializable("feed", feed);
  
-// launch List activity
+// launch List activityz
 Intent intent = new Intent(Splash3.this, ListAct.class);
 intent.putExtras(bundle);
 startActivity(intent);

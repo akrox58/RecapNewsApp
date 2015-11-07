@@ -3,13 +3,17 @@ package com.rufflez.parseloginexample;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.parse.ParseUser;
 import com.rufflez.parseloginexample.rssurls.Splash1;
+import com.rufflez.parseloginexample.rssurls.Splash10;
+import com.rufflez.parseloginexample.rssurls.Splash11;
 import com.rufflez.parseloginexample.rssurls.Splash2;
 import com.rufflez.parseloginexample.rssurls.Splash3;
 
@@ -21,34 +25,51 @@ public class MainHome extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_home);
 
+        //top 1
         ((Button) findViewById(R.id.top)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(MainHome.this, Splash1.class));
             }
         });
+
+        //recent 2
         ((Button) findViewById(R.id.recent)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(MainHome.this, Splash2.class));
             }
         });
+
+        //location
         ((Button) findViewById(R.id.location)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(MainHome.this, Location.class));
             }
         });
+
+        //international 3
         ((Button) findViewById(R.id.international)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(MainHome.this, Splash3.class));
             }
         });
+
+        //GENERAL
         ((Button) findViewById(R.id.general)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(MainHome.this, General.class));
+            }
+        });
+
+        //DOWNLOAD
+        ((Button) findViewById(R.id.download)).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Starts an intent for the sign up activity
+                startActivity(new Intent(MainHome.this, Downloads.class));
             }
         });
     }

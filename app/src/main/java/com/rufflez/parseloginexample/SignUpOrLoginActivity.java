@@ -3,8 +3,10 @@ package com.rufflez.parseloginexample;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class SignUpOrLoginActivity extends Activity {
 
@@ -12,6 +14,8 @@ public class SignUpOrLoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_or_login);
+
+
 
         // Log in button click handler
         ((Button) findViewById(R.id.login)).setOnClickListener(new View.OnClickListener() {

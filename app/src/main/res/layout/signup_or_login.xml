@@ -1,25 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/socool"
+    >
+
+    <Button
+        android:id="@+id/news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUICK READ"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ne"
+         />
 
     <Button
         android:id="@+id/signup"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"/>
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/signup"
+        android:layout_alignParentBottom="true"
+         />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"/>
-    <Button
-        android:id="@+id/news"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Read News"/>
+        android:text="LOGIN HERE!"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+         />
 
-</LinearLayout>
+
+</RelativeLayout>

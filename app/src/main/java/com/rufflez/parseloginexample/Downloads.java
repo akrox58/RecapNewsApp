@@ -12,8 +12,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.parse.ParseUser;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -21,9 +19,11 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-public class SplashActivity extends Activity {
 
-    private String RSSFEEDURL = "http://feeds.feedburner.com/NDTV-LatestNews?format=xml";
+public class Downloads extends Activity {
+
+
+    private String RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533965/index.rss";
     RSSFeed feed;
     String fileName;
 
@@ -33,7 +33,7 @@ public class SplashActivity extends Activity {
 
         setContentView(R.layout.splash);
 
-        fileName = "TDRSSFeed.td";
+        fileName = "TDRSSFeed2.td";
 
         File feedFile = getBaseContext().getFileStreamPath(fileName);
 
@@ -86,7 +86,7 @@ public class SplashActivity extends Activity {
         bundle.putSerializable("feed", feed);
 
 // launch List activity
-        Intent intent = new Intent(SplashActivity.this, ListAct.class);
+        Intent intent = new Intent(Downloads.this, ListAct.class);
         intent.putExtras(bundle);
         startActivity(intent);
 
@@ -103,9 +103,86 @@ public class SplashActivity extends Activity {
             DOMParser myParser = new DOMParser();
             feed = myParser.parseXml(RSSFEEDURL);
             if (feed != null && feed.getItemCount() > 0)
-                WriteFeed(feed);
-            return null;
+                WriteFeed(feed,fileName);
 
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed1.td";
+            RSSFEEDURL = "http://dynamic.feedsportal.com/pf/555218/http://toi.timesofindia.indiatimes.com/rssfeedstopstories.cms";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed3.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533917/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed4.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533924/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed5.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533923/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed6.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533922/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed7.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533922/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed8.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533921/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed9.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533979/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed10.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533975/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            myParser=new DOMParser();
+            fileName = "TDRSSFeed11.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533976/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+
+            fileName = "TDRSSFeed12.td";
+            RSSFEEDURL = "http://timesofindia.feedsportal.com/c/33039/f/533977/index.rss";
+            feed = myParser.parseXml(RSSFEEDURL);
+            if (feed != null && feed.getItemCount() > 0)
+                WriteFeed(feed,fileName);
+
+            return null;
         }
 
         @Override
@@ -117,7 +194,7 @@ public class SplashActivity extends Activity {
     }
 
     // Method to write the feed to the File
-    private void WriteFeed(RSSFeed data) {
+    private void WriteFeed(RSSFeed data,String fileName) {
 
         FileOutputStream fOut = null;
         ObjectOutputStream osw = null;

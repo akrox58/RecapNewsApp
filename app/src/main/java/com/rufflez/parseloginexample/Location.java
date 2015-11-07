@@ -26,24 +26,32 @@ public class Location extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.location);
+
+        //chennai - 9
         ((Button) findViewById(R.id.chennai)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(Location.this, Splash9.class));
             }
         });
+
+        //bombay 10
         ((Button) findViewById(R.id.bombay)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(Location.this, Splash10.class));
             }
         });
+
+        //delhi - 11
         ((Button) findViewById(R.id.delhi)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
                 startActivity(new Intent(Location.this, Splash11.class));
             }
         });
+
+        //bangalore - 12
         ((Button) findViewById(R.id.bangalore)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Starts an intent for the sign up activity
